@@ -1,0 +1,129 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+section{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 100vh;
+}
+
+/* -------------Profile Picture box------------- */
+.profile{
+    width: 100%;
+    height: 100vh;
+    background-color: #c313db;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    background-image: 
+    linear-gradient(to right, rgba(255,255,255,0.1) 2px,transparent 1px),
+    linear-gradient(to bottom, rgba(255,255,255,0.1) 2px,transparent 1px);
+    background-size: 140px 140px;
+}
+.profile_pic_box{
+    background-color: #fff;
+    width: 350px;
+    height: 370px;
+    border-radius: 7px;
+    text-align: center;
+}
+.previewimg{
+    width: 60%;
+    height: 60%;
+    position: relative;
+    border-radius: 50%;
+    margin: 20px;
+}
+.profile_pic_box label{
+    font-size: 14px;
+}
+.profile_pic_box label .fa-solid{
+    background-color: #aaa8a8;
+    border-radius: 50%;
+    padding: 10px;
+}
+
+
+/* -----------Sign up box----------- */
+
+.set_up{
+    width: 100%;
+    height: 100vh;
+    border-radius: 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.set_up form h1{
+    font-size: 30px;
+}
+.set_up form{
+  padding: 40px 60px;
+  background-color:#fff;
+
+}
+.set_up form div{
+    margin-top: 30px;
+    line-height: 40px;
+}
+.set_up form input{
+    padding: 10px;
+    width: 80%;
+    border-radius: 10px;
+    border: 2px solid lightslategrey;
+}
+.login_btn{
+    width: 90%;
+    padding: 10px;
+    background-color: #c313db;
+    color: #fff;
+    border: none;
+    margin-top: 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.set_up form label{
+    font-size: 14px;
+    color: black;
+}
+.upload_btn{
+    cursor: pointer;
+    transition: transform 0.8s ease;
+}
+.login_btn:hover{
+    transform: scale(0.94);
+}
+
+@media screen and (max-width:950px){
+    section{
+        grid-template-columns: 1fr;
+        position: relative;
+    }
+    .profile{
+        height: max-content;
+        top: 60px;
+        background-image:none;
+        background-color: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .profile_pic_box{
+        height: 170px;
+        border-radius: 0;
+    }
+    .previewimg{
+        width: 50%;
+    }
+    .set_up{
+        height: max-content;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+    }
+}
